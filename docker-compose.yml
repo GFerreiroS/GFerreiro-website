@@ -1,9 +1,19 @@
 services:
   database:
-    image: postgres:stable
+    container_name: postgres
+    image: postgres:latest
     environment:
-      - POSTGRES_USER="postgres"
-      - POSTGRES_PASSWORD="password"
-      - POSTGRES_DB="gferreiro-website"
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=gferreiro-website
     ports:
       - 5432:5432
+  server:
+    container_name: node
+    build: 
+      context: ./
+      dockerfile: dockerfile
+    volumes:
+      - ./src:/src
+    ports:
+      - 3000:3000
