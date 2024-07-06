@@ -18,9 +18,9 @@ export default function HomePage() {
           <Link className="pr-2" href="https://www.linkedin.com/in/gabriel-ferreiro-sedlovskij/">
             <FaLinkedin className="text-5xl" />
           </Link>
-          <Link className="pr-2" href="/about">
-            <FaInfoCircle className="text-5xl" />
-          </Link>
+          <a className="pr-2" href="/cv/cv.png" download>
+            <img src="/images/cv.png" alt="" className="h-12"/>
+          </a>
           <Link className="pr-2" href="https://blog.gferreiro.com">
             <FaBlog className="text-5xl" />
           </Link>
